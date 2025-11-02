@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eavestrough_estimator"
+version = "0.1.0"
+description = "Estimate eavestrough requirements for Canadian buildings"
+requires-python = ">=3.8"
+dependencies = [
+    "geopandas",
+    "shapely",
+    "pyproj",
+    "pandas",
+    "numpy",
+    "geopy",
+    "matplotlib",
+    "requests"
+]
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[project.optional-dependencies]
+dev = ["black"]
